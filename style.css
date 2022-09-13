@@ -1,0 +1,85 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+   
+    background-image: url("img/table.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+div.top{
+    display: flex;
+    align-self: flex-start;
+}
+
+div.top > p{
+    margin-left: 1em;;
+}
+
+div.main{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+div.card-slots{
+    height: 29vh;
+    width: calc(29vh * 5 / 7);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+div.card-slots:nth-of-type(1){
+    margin-bottom: 1vh;
+}
+
+div.card-slots > img{
+    height: 100%;
+    width: 100%;
+}
+
+button{
+    background-color: yellow;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+button#draw{
+    align-self: stretch;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.disabled {
+    pointer-events:none; 
+    color:gray           
+}
+
+button#draw:disabled{
+    cursor: not-allowed;
+}
+@media (max-height:550px){
+   button{
+        background-color: red;
+   }
+   div.cards{
+        display: flex;
+        flex-direction: row;
+   }
+   div.card-slots:nth-of-type(1){
+    margin-right: 1em;
+   }
+}
